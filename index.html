@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calc.css">
+</head>
+<body>
+    <fieldset >
+        <script>
+            function Somme() {
+                var nombre1 = parseFloat(document.getElementById("nombre1").value);
+                var nombre2 = parseFloat(document.getElementById("nombre2").value);
+                var resultat = nombre1 + nombre2;
+                document.getElementById("resultat").value = resultat;
+                document.getElementById("operateur").value = "+";
+            }
+            function Multiplication() {
+                var nombre1 = parseFloat(document.getElementById("nombre1").value);
+                var nombre2 = parseFloat(document.getElementById("nombre2").value);
+                var resultat = nombre1 * nombre2;
+                document.getElementById("resultat").value = resultat;
+                document.getElementById("operateur").value = "*";
+            }
+            function Soustraction() {
+                var nombre1 = parseFloat(document.getElementById("nombre1").value);
+                var nombre2 = parseFloat(document.getElementById("nombre2").value);
+                var resultat = nombre1 - nombre2;
+                document.getElementById("resultat").value = resultat;
+                document.getElementById("operateur").value = "-";
+            }
+            function Division() {
+                var nombre1 = parseFloat(document.getElementById("nombre1").value);
+                var nombre2 = parseFloat(document.getElementById("nombre2").value);
+                var resultat = nombre1 / nombre2;
+                document.getElementById("resultat").value = resultat;
+                document.getElementById("operateur").value = "/";
+            }
+            </script>
+    
+        <legend><h3>CALCULATOR</h3></legend>
+        <label for="nombre1">Entrer Nombre 1:</label>
+        <input type="number" name="nombre1" id="nombre1" class="container">
+        <br>
+        <input type="text" name="operateur" id="operateur" class="container">
+        <br>
+        <label for="nombre2">Entrer Nombre 2:</label>
+        <input type="number" name="nombre2" id="nombre2" class="container">
+        <br>
+        <label for="resultat">Resultat:</label>
+        <input type="number" name="resultat" id="resultat" class="container">
+        <br>
+        <button onclick="Somme()">Somme</button>
+        <button onclick="Multiplication()">Multiplication</button>
+        <button onclick="Soustraction()">Soustraction</button>
+        <button onclick="Division()">Division</button>
+    </fieldset>
+</body>
+</html>
